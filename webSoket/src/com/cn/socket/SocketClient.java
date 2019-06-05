@@ -7,15 +7,15 @@ import java.net.Socket;
 public class SocketClient {
 	
     public static void main(String[] args) {
-    	 // ÒªÁ¬½ÓµÄ·şÎñ¶ËIPµØÖ·ºÍ¶Ë¿Ú
+    	 // è¦è¿æ¥çš„æœåŠ¡ç«¯IPåœ°å€å’Œç«¯å£
     	String host = "127.0.0.1";
     	int port = 55533;
-    	// Óë·şÎñ¶Ë½¨Á¢Á¬½Ó
+    	// ä¸æœåŠ¡ç«¯å»ºç«‹è¿æ¥
     	try {
 			Socket socket = new Socket(host, port);
-			// ½¨Á¢Á¬½Óºó»ñµÃÊä³öÁ÷
+			// å»ºç«‹è¿æ¥åè·å¾—è¾“å‡ºæµï¼ˆæ­£ç¡®ï¼‰
 			OutputStream outputStream  = socket.getOutputStream();
-		    String message="ÄãºÃ  yiwangzhibujian,ÕÅÉÙ½Ü£¬ÄãÊÇ×îË§µÄ";
+		    String message="ä½ å¥½  yiwangzhibujian,å¼ å°‘æ°ï¼Œä½ æ˜¯æœ€å¸…çš„";
 			socket.getOutputStream().write(message.getBytes("UTF-8"));
 			outputStream.close();
 		    socket.close();
